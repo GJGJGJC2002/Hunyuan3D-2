@@ -9,3 +9,11 @@
 - 相关综述
 
 ### 需求1：运行起Hunyuan项目
+
+python310torch240安装了diffuser，安装了transformers，pymeshlab但是过程中发现没有内存了
+尝试清理了内存：
+```
+df -h
+du -sh ~/*
+du -sh ~/Work/*
+```
