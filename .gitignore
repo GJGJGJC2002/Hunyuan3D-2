@@ -183,3 +183,6 @@ demo_untextured.glb
 white_mesh_remesh.obj
 hy3dpaint/ckpt/
 
+model.fp.16.ckpt
+wgetmodel1.log
+model.fp16.ckpt
