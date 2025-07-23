@@ -40,4 +40,6 @@ Try to load model from local path: /home/gejunchen/.cache/hy3dgen/tencent/Hunyua
 nohup wget -c https://huggingface.co/tencent/Hunyuan3D-2.1/resolve/main/hunyuan3d-dit-v2-1/model.fp16.ckpt --progress=dot:mega > wgetmodel1.log &  
 等待模型下载完成.......
 
-
+7-23
+重现运行nohup wget -c https://huggingface.co/tencent/Hunyuan3D-2.1/resolve/main/hunyuan3d-dit-v2-1/model.fp16.ckpt --progress=dot:mega > wgetmodel1.log &  
+似乎成功实现了断点续传
