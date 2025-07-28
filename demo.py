@@ -1,6 +1,6 @@
 import sys
-sys.path.insert(0, './hy3dshape')
-sys.path.insert(0, './hy3dpaint')
+sys.path.insert(0, '/home/gejunchen/Work/2025-6/Baseline/Hunyuan3D-2.1/hy3dshape')
+sys.path.insert(0, '/home/gejunchen/Work/2025-6/Baseline/Hunyuan3D-2.1/hy3dpaint')
 
 from PIL import Image
 from hy3dshape.rembg import BackgroundRemover
@@ -21,14 +21,17 @@ except Exception as e:
 model_path = 'tencent/Hunyuan3D-2.1'
 pipeline_shapegen = Hunyuan3DDiTFlowMatchingPipeline.from_pretrained(model_path)
 
-image_path = 'assets/demo.png'
-image = Image.open(image_path).convert("RGBA")
+
+image_path = './test_img/car.png'
+image = Image.open(image_path)
 if image.mode == 'RGB':
     rembg = BackgroundRemover()
     image = rembg(image)
 
+#输出image
+image.save(image_path[:-4] + '_rembg.png')
 mesh = pipeline_shapegen(image=image)[0]
-mesh.export('demo.glb')
+mesh.export(image_path[:-4] + '_rembg.glb')
 
 # # paint
 # max_num_view = 6  # can be 6 to 9

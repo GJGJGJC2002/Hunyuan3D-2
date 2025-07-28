@@ -10,7 +10,7 @@
 
 ### 需求1：运行起Hunyuan项目
 
-python310torch240安装了diffuser,transformers,pymeshlab,rembg,onnxruntime但是过程中发现没有内存了
+**python310torch240**安装了diffuser,transformers,pymeshlab,rembg,onnxruntime但是过程中发现没有内存了
 尝试清理了内存：
 ```
 df -h
@@ -43,3 +43,11 @@ nohup wget -c https://huggingface.co/tencent/Hunyuan3D-2.1/resolve/main/hunyuan3
 7-23
 重现运行nohup wget -c https://huggingface.co/tencent/Hunyuan3D-2.1/resolve/main/hunyuan3d-dit-v2-1/model.fp16.ckpt --progress=dot:mega > wgetmodel1.log &  
 似乎成功实现了断点续传
+
+### 需求2：可视化glb文件
+批量可视化，批量运行的代码
+
+
+### 需求3：输入矩阵
+详细需求：如何进行定制化输出？
+
